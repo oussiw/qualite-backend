@@ -18,7 +18,7 @@ class StateServiceImplTest {
 
     @DisplayName("Spring test for GetStatesByCountryCode function when country codes are valid -US-BR-CA-")
     @Test
-    void testGetStatesByCountryCodeValide(){
+    void testGetStatesByCountryCodeValid(){
         int[] expectedValues= {51,27,13};
         int[] actualValues= {
                 service.getStatesByCountryCode("us").size(),
@@ -30,7 +30,7 @@ class StateServiceImplTest {
 
     @DisplayName("\n\nSpring test for GetStatesByCountryCode function when country codes aren't valid -USS-BRR-CAA-")
     @Test
-    void testGetStatesByCountryCodeNotValide(){
+    void testGetStatesByCountryCodeNotValid(){
         int[] expectedValues= {51,27,13};
         int[] actualValues= {
                 service.getStatesByCountryCode("uss").size(),
