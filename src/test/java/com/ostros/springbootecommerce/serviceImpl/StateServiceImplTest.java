@@ -25,7 +25,7 @@ class StateServiceImplTest {
                 service.getStatesByCountryCode("br").size(),
                 service.getStatesByCountryCode("ca").size()
         };
-        Assertions.assertArrayEquals(expectedValues,actualValues);
+        Assertions.assertArrayEquals(expectedValues,actualValues,"Test passed");
     }
 
     @DisplayName("\n\nSpring test for GetStatesByCountryCode function when country codes aren't valid -USS-BRR-CAA-")
@@ -37,7 +37,7 @@ class StateServiceImplTest {
                 service.getStatesByCountryCode("brr").size(),
                 service.getStatesByCountryCode("caa").size()
         };
-        Assertions.assertArrayEquals(expectedValues,actualValues);
+        Assertions.assertNotEquals(expectedValues,actualValues,"Test passed");
     }
 
     @DisplayName("\n\nSpring test for GetStatesByCountryCode function when output value doesn't match the expected value")
@@ -49,7 +49,7 @@ class StateServiceImplTest {
                 service.getStatesByCountryCode("ca").size(),
                 service.getStatesByCountryCode("us").size()
         };
-        Assertions.assertArrayEquals(expectedValues,actualValues);
+        Assertions.assertNotEquals(expectedValues,actualValues,"Test passed");
     }
 
 }
