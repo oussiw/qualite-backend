@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@CrossOrigin
-@RepositoryRestResource
 public interface StateRepository extends JpaRepository<State, Integer> {
     List<State> findByCountryCode(@RequestParam("code") String code);
 }

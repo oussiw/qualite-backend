@@ -23,10 +23,6 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
     @Autowired
     private EntityManager entityManager;
 
-    //    @Autowired
-//    public MyDataRestConfig(EntityManager theEntityManager){
-//        entityManager = theEntityManager;
-//    }
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         HttpMethod[] theUnsupportedActions = {HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE};
