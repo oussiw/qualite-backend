@@ -20,17 +20,17 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 class CountryServiceImplMockTest {
 
-//    @Mock
-//    private CountryRepository repository;
-//
-//    @InjectMocks
-//    private CountryService service = new CountryServiceImpl();
-
-    @MockBean
+    @Mock
     private CountryRepository repository;
 
-    @Autowired
-    private CountryService service;
+    @InjectMocks
+    private CountryService service = new CountryServiceImpl();
+
+//    @MockBean
+//    private CountryRepository repository;
+//
+//    @Autowired
+//    private CountryService service;
 
     @DisplayName("Spring test Mockito for GetAll function ")
     @Test

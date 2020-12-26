@@ -28,7 +28,7 @@ class StateServiceImplTest {
         Assertions.assertArrayEquals(expectedValues,actualValues,"Test passed");
     }
 
-    @DisplayName("\n\nSpring test for GetStatesByCountryCode function when country codes aren't valid -USS-BRR-CAA-")
+    @DisplayName("Spring test for GetStatesByCountryCode function when country codes aren't valid -USS-BRR-CAA-")
     @Test
     void testGetStatesByCountryCodeNotValid(){
         int[] expectedValues= {51,27,13};
@@ -40,7 +40,7 @@ class StateServiceImplTest {
         Assertions.assertNotEquals(expectedValues,actualValues,"Test passed");
     }
 
-    @DisplayName("\n\nSpring test for GetStatesByCountryCode function when output value doesn't match the expected value")
+    @DisplayName("Spring test for GetStatesByCountryCode function when output value doesn't match the expected value")
     @Test
     void testGetStatesByCountryCodeWrongOutputValues(){
         int[] expectedValues= {51,27,13};
